@@ -2,9 +2,12 @@
 Search Assignment Starter Code
 Implement three search algorithms and benchmark their performance.
 """
+
 import json
 import time
 import random
+
+
 # ============================================================================
 # PART 1: Linear Search
 # ============================================================================
@@ -34,6 +37,8 @@ def linear_search(data, target):
         if value==target:
             return i
     return-1
+
+
 # ============================================================================
 # PART 2: Binary Search (Iterative)
 # ============================================================================
@@ -72,6 +77,8 @@ def binary_search_iterative(data, target):
         else:
             right=mid-1
     return-1
+
+
 # ============================================================================
 # PART 3: Binary Search (Recursive)
 # ============================================================================
@@ -111,6 +118,8 @@ def binary_search_recursive(data, target, left=None, right=None):
     if data[mid]<target:
         return binary_search_recursive(data,target,mid+1,right)
     return binary_search_recursive(data,target,left,mid-1)
+
+
 # ============================================================================
 # BENCHMARKING & TESTING
 # ============================================================================
